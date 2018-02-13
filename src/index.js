@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './styles/base.css';
 
-export default function App() {
-  return <div>React Lessons</div>;
-}
+import LessonFive from './components/05-Conditionally-Render-Components';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<LessonFive />, document.getElementById('root'));
 registerServiceWorker();
