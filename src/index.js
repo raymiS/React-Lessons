@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './styles/base.css';
 
-export default function App() {
-  return <div>React Lessons</div>;
-}
+import LessonNine from './components/09-Component-State-React';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<LessonNine />, document.getElementById('root'));
 registerServiceWorker();
