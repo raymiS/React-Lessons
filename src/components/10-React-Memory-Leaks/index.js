@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class LessonNine extends Component {
+class StopWatch extends Component {
   state = { lapse: 0, running: false };
   handleClearClick = () => {
     clearInterval(this.timer);
@@ -17,14 +17,24 @@ class LessonNine extends Component {
       } else {
         const timeStart = Date.now() - this.state.lapse;
         this.timer = setInterval(() => {
-          this.setState({
-            lapse: Date.now() - timeStart
-          });
+          this.setState(
+            {
+              lapse: Date.now() - timeStart
+            },
+            () => {
+              console.log(this.state.lapse);
+            }
+          );
         });
       }
       return { running: !state.running };
     });
   };
+
+  componentWillUnmount() {
+    // Using componetWillUnmount lifecycle to clear the setInterval method and preventing memory leaks
+    clearInterval(this.timer);
+  }
   render() {
     const { lapse, running } = this.state;
     const buttonStyles = {
@@ -51,4 +61,29 @@ class LessonNine extends Component {
   }
 }
 
-export default LessonNine;
+class LessonTen extends Component {
+  state = { showStopWatch: true };
+  render() {
+    const { showStopWatch } = this.state;
+    return (
+      <div>
+        <label>
+          Show Stop Watch{' '}
+          <input
+            type="checkbox"
+            checked={showStopWatch}
+            onChange={() =>
+              this.setState(s => ({
+                showStopWatch: !s.showStopWatch
+              }))
+            }
+          />
+        </label>
+        <hr />
+        {showStopWatch ? <StopWatch /> : null}
+      </div>
+    );
+  }
+}
+
+export default LessonTen;

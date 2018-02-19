@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './styles/base.css';
 
-import LessonNine from './components/09-Component-State-React';
+import LessonTen from './components/10-React-Memory-Leaks';
 
-ReactDOM.render(<LessonNine />, document.getElementById('root'));
+ReactDOM.render(<LessonTen />, document.getElementById('root'));
 registerServiceWorker();
