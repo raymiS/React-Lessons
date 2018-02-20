@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './styles/base.css';
 
-export default function App() {
-  return <div>React Lessons</div>;
-}
+import BasicForms from './components/13-React-Basic-Forms';
+import TextInputAutoFocus from './components/react-ref-dom/TextInputAutoFocus';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<TextInputAutoFocus />, document.getElementById('root'));
 registerServiceWorker();
