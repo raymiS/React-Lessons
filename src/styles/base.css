@@ -64,3 +64,37 @@ h2 {
 .box--small {
   width: 10%;
 }
+
+/* React Forms Lessons CSS */
+
+form label,
+form input,
+form button {
+  font-size: 1.5em;
+}
+
+form button {
+  text-transform: uppercase;
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  padding: 15px 0;
+  margin-top: 15px;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+
+form button:enabled {
+  background: white;
+  border-radius: 5px;
+  color: black;
+  font-weight: bolder;
+}
+
+form button:enabled:hover {
+  background: black;
+  border-radius: 5px;
+  color: white;
+  font-weight: bolder;
+}

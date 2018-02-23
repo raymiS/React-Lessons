@@ -39,6 +39,7 @@ class DynamicForms extends Component {
               onChange={this.handleSubmitChange}
             />
           </label>
+          {error ? <div>{error}</div> : null}
           <button type="submit" disabled={Boolean(error)}>
             Submit
           </button>
