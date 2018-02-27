@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './styles/base.css';
 
-export default function App() {
-  return <div>React Lessons</div>;
-}
+import ReactKeyPropDemos from './components/15-React-Key-Prop';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<ReactKeyPropDemos />, document.getElementById('root'));
 registerServiceWorker();

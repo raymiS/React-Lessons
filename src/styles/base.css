@@ -64,3 +64,54 @@ h2 {
 .box--small {
   width: 10%;
 }
+
+/* Lesson 15: React Key Prop */
+
+button {
+  border: none;
+  width: 50px;
+  height: 50px;
+  font-size: 2em;
+  cursor: pointer;
+  display: block;
+}
+
+/*
+.addBtn {
+  border: none;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 2em;
+  cursor: pointer;
+}
+*/
+
+.items-wrap {
+  margin: 30px 0;
+}
+
+.items-wrap > div {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-basis: 50%;
+  margin: 20px 0;
+}
+
+.items-wrap input {
+  display: block;
+  flex-basis: 30%;
+  font-size: 1.5em;
+}
+
+.item {
+  background: red;
+  flex-basis: 50%;
+}
+
+.item,
+input {
+  padding: 15px 0;
+}
